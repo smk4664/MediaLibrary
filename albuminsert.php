@@ -7,7 +7,7 @@ if ($admin == '1') {   // If User Is An Admin
   print '<a href="library/logout.php">Logout</a>';
   
 // Include Database Connection Files
-	include 'library/inconfig.php';
+	include '/usr/lib/MediaLibrary/inconfig.php';
 	include 'library/connectdb.php';
 
 // Set variable for Album Instert

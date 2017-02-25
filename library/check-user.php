@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include '/usr/lib/MediaLibrary/config.php';
 include 'connectdb.php';
 
 if (isset($_COOKIE['user']) && isset($_COOKIE['pass'])) {   // Checking To See If Cookies Exist And If They're Good - Need to change to sessions, not sure on this yet.

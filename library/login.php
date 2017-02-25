@@ -1,6 +1,6 @@
 <?php
 
-include 'config.php';
+include '/usr/lib/MediaLibrary/config.php';
 include 'connectdb.php';
 
 if (!isset($_GET['subpage'])) {   // If No Subpage Is Specified

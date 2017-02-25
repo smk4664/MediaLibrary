@@ -1,6 +1,6 @@
 <?php
 // Include Database Connection Files
-	include 'library/config.php';
+	include '/usr/lib/MediaLibrary/config.php';
 	include 'library/connectdb.php';
 	
 // Select search form
