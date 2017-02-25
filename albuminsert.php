@@ -27,7 +27,7 @@ if ($admin == '1') {   // If User Is An Admin
 	$sqlinsert = "INSERT INTO albums (name) VALUES ('$albuminsert')";
 
 // Execute the query
-	mysqli_query($con, $sqlinsert) or die(mysqli_error());
+	mysqli_query($con, $sqlinsert) or die(mysqli_error($con));
 	
 // Echo 
 echo "Artist has been added";

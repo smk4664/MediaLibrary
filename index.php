@@ -1,14 +1,18 @@
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<title>Main Page</title>
-<link rel="stylesheet" href="template/sample.css" />
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Media Library</title>
+<link rel="stylesheet" href="images/style.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
 </head>
 <body>
-<div style="text-align: center">Media Library</div>
+<div class="logo">
+    <h1><a href="#" title="A great Media Library!">Media <span class="red">Library</span></a></h1>
+    <p>My Media Library</p>
+</div>
 <?php
 require 'library/check-user.php';   // Require check-user.php (ALWAYS Use require For Important Files Such As This
-if ($admin == '1') {   // If User Is An Admin ?>
+if ($admin == '1') {   // If User Is An Admin 
+?>
   
   <P align=right> Logged in as <?php echo "$user" ?>.
   <BR>
@@ -36,7 +40,8 @@ if ($admin == '1') {   // If User Is An Admin ?>
   <a href="search.php">Library</a>
   </p>
 <?php 
-} else {   // If No Cookies Are Set, Cookies Are Expired, Or Cookies Contain Invalid Username And/Or Password  print '<br /><br />';
+} else {   // If No Cookies Are Set, Cookies Are Expired, Or Cookies Contain Invalid Username And/Or Password
+  print '<br /><br />';
   print '<a href="library/login.php">Login</a>';
 }
 ?>
