@@ -25,9 +25,10 @@ Password:<br />
   $usercheck2 = mysqli_query($con, "SELECT * FROM users WHERE username='$user' AND password='$pass'");   // Check If Any Users Match Username & Password Entered
   $usercheck = mysqli_num_rows($usercheck2);   // Number Of Results Of The Query
   if ($usercheck > '0') {   // If One Or More Users Were Found
-    setcookie("user", $user, time()+60*60*24*30, "/", "media.ntxmc.com", 0);   // Setting The Cookie - Need to change this to Session
-    setcookie("pass", $pass, time()+60*60*24*30, "/", "media.ntxmc.com", 0);   // Setting The Cookie - Need to remove this line when changing to session
-    header("Location: ../index.php");   // Redirect To index.php
+      session_start();
+      $_SESSION ['user'] = $user;   // Setting The Cookie - Need to change this to Session
+      $_SESSION ['pass'] = $pass;   // Setting The Cookie - Need to remove this line when changing to session
+      header("Location: ../index.php");   // Redirect To index.php
   } else {
     header("Location: login.php?error=1");   // Redirect Back To The Login Form With An Error
   }
