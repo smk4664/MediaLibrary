@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '/usr/lib/MediaLibrary/config.php';
 include 'connectdb.php';
 

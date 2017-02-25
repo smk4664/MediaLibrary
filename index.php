@@ -10,8 +10,8 @@
     <p>My Media Library</p>
 </div>
 <?php
+session_start();
 require 'library/check-user.php';   // Require check-user.php (ALWAYS Use require For Important Files Such As This
-echo $_SESSION['user'];
 if ($admin == '1') {   // If User Is An Admin
 ?>
   
