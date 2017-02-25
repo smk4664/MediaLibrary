@@ -11,7 +11,8 @@
 </div>
 <?php
 require 'library/check-user.php';   // Require check-user.php (ALWAYS Use require For Important Files Such As This
-if ($admin == '1') {   // If User Is An Admin 
+echo $_SESSION['user'];
+if ($admin == '1') {   // If User Is An Admin
 ?>
   
   <P align=right> Logged in as <?php echo "$user" ?>.
